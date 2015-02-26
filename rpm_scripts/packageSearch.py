@@ -8,6 +8,11 @@
 # version numbers specified by the user on the command line and send an e-mail to the employees
 # that are technical resposible for the server where the package version is found
 #
+
+#
+# Needs a few adjustments in order to work in specific environments
+#
+
 import ldap
 import xmlrpclib
 import re
@@ -19,17 +24,17 @@ import argparse
 from distutils.version import StrictVersion
 
 # ldap settings
-ldap_server = "ldap://ldap-master01.osl.basefarm.net"
-base_search_osl = "ou=Inventory,o=osl.basefarm.net,cn=DAM"
-base_search_sth = "ou=Inventory,o=sth.basefarm.net,cn=DAM"
-base_search_ams = "ou=Inventory,o=ams.basefarm.net,cn=DAM"
-attributes = ['cn', 'DAMswPackageUsed', 'owner']
-mail_server = "mail.osl.basefarm.net"
+ldap_server = ""
+base_search_osl = ""
+base_search_sth = ""
+base_search_ams = ""
+attributes = "" 
+mail_server = ""
 
 # satellite settings
-satellite_url = "http://rhns01.osl.basefarm.net/rpc/api"
-satellite_username = "sym_check"
-satellite_password = "NR2QEdGc"
+satellite_url = ""
+satellite_username = ""
+satellite_password = ""
 specific_package_ids = []
 total_installations = []
 client = xmlrpclib.Server(satellite_url, verbose=0)
@@ -266,12 +271,12 @@ def send_mail(mail, customer):
             for line in mail_body:
                 content = content + "\n" + line
 
-            subject = "Basefarm SyM security alert"
+            subject = "Security alert"
             mail = "Subject: %s\n\n%s" % (subject, content)
 
             print "--> Sending mail to technical account manager for " + customer_name
-            to_mail="chrisr@basefarm.no"
-            from_mail="chrisr@basefarm.no"
+            to_mail=""
+            from_mail=""
             content_mail = mail_body
             #smtp_server = smtplib.SMTP(mail_server)
             #smtp_server.sendmail(from_mail, to_mail, mail)
