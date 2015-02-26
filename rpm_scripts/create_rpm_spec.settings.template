@@ -1,0 +1,8 @@
+APP_NAME="<app name>"
+APP_VERSION="<app version>"
+APP_SUMMARY="<app summary>"
+APP_GROUP="<app group>"
+APP_LICENSE="<app license>"
+APP_URL="<app_url>"
+APP_DESCRIPTION="<app description>"
+FILES="<directory where the package should be installed on the system>"

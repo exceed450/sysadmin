@@ -1,0 +1,9 @@
+APP_NAME=activemq
+APP_VERSION=5.9.1
+APP_SUMMARY="One of the most popular messaging and integration patterns server."
+APP_GROUP="Java"
+APP_LICENSE="Apache License version 2"
+APP_URL="http://activemq.apache.org/"
+APP_DESCRIPTION="Apache ActiveMQ is the most popular and powerful open source messaging and Integration Patterns server."
+FILES="/opt/java/activemq"
+source_url="http://apache.claz.org/activemq/5.9.1/apache-activemq-5.9.1-bin.tar.gz"

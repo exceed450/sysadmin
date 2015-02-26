@@ -1,0 +1,10 @@
+README
+================================
+
+Please note:
+Do -not- do any changes to the code for MultiTaskRemote. Take a copy of the code to your own laptop or server and experiment with it. 
+To run the script use the RunMultiTaskRemote.py file and type "MultiTaskRemote.py -h" to get a complete listing of all available options.
+
+
+- chris
+java department
