@@ -1,5 +1,6 @@
 "
 " VIM configuration
+" @author christianru
 "
 
 " Use same indention as the previous line
